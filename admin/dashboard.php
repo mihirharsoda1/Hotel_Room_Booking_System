@@ -15,6 +15,12 @@ adminLogin();
     <?php
     require('inc/links.php');
     $is_shutdown = mysqli_fetch_assoc(mysqli_query($con, "SELECT `shutdown` FROM `settings`"));
+    $current_bookings = mysqli_fetch_assoc(mysqli_query($con, "SELECT 
+        COUNT(CASE WHEN booking_status='booked' AND arrival=0 THEN 1 END) AS `new_bookings`,
+        COUNT(CASE WHEN booking_status='cancelled' AND refund=0 THEN 1 END) AS `refund_bookings`
+        FROM `booking_order`"));
+    $unread_queries = mysqli_fetch_assoc(mysqli_query($con, "SELECT COUNT(sr_no) FROM `user_queries`"));
+
     ?>
 </head>
 
