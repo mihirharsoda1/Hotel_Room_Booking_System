@@ -139,9 +139,9 @@ $room_no = $data['room_number'] ?? 'Not Assigned';
                     <?php endif; ?>
 
                     <div class="regards-box">
-                        <p>Thank you for choosing <strong>ARORA PALACE HOTEL</strong>.<br>
+                        <p>Thank you for choosing <strong>CROWN HOTEL</strong>.<br>
                             We hope you enjoy your stay!</p>
-                        <strong>Warm Regards,<br>ARORA PALACE HOTEL TEAM</strong>
+                        <strong>Warm Regards,<br>CROWN HOTEL TEAM</strong>
                     </div>
                 </div>
 
